@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Stone Cold Queue</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="scq.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div id="site-bg"></div>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+          <div class="inner cover">
+            <div id="loading-wrapper">
+              <img class="center-block loading" src="skull.png" />
+              <img class="center-block loading" src="load.gif" />
+            </div>
+            <div id="loaded-content" style="display:none">
+              <p class="lead" id="track-info">Loading...</p>
+              <p class="lead" id="track-art-wrapper"><img id="track-art" src="load.gif" /></p>
+              <p class="lead">
+                <a href="javascript:void(0)" id="q" class="btn btn-lg btn-default">Queue it</a>
+              </p>
+            </div>
+          </div>
+          <div class="mastfoot">
+            <div class="inner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="scq.js"></script>
+  </body>
+</html>
