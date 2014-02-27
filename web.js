@@ -7,6 +7,7 @@ app.configure(function(){
   app.set('view engine','html');
   app.set('view options',{layout:true});
   var oneYear = 31557600000;
+  app.use(express.compress());
   app.use(express.static(__dirname + '/static', { maxAge: oneYear }));
   app.use(express.errorHandler());
 });

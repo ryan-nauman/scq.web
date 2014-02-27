@@ -1,6 +1,6 @@
 {
   "name": "scq.web",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "scq",
   "main": "web.js",
   "scripts": {
@@ -9,8 +9,8 @@
   "author": "Ryan Nauman <ryanjnauman@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "express": "^3.4.8",
-    "request": "^2.34.0"
+    "express": "^3.4.8"
+    //,"request": "^2.34.0"
   },
   "engines": {
     "node": "0.10.x"
