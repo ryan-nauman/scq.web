@@ -1,7 +1,5 @@
-// web.js
 var express = require("express");
 var app = express();
-var request = require("request");
 
 app.configure(function(){
   app.set('view engine','html');
@@ -13,6 +11,7 @@ app.configure(function(){
 });
 
 // jsonp can be used instead
+//var request = require("request");
 // app.get('/oembed/:tid', function(req, res) {
 //   var uri = 'https://embed.spotify.com/oembed/?url=spotify:track:' + req.params.tid;
 //   var thumb;
