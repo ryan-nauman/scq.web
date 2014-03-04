@@ -3,4 +3,4 @@ function ping() {
   console.log('pong');
 }
 ping();
-exit();
+process.exit();
