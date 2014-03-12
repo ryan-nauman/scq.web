@@ -25,7 +25,7 @@
               <img class="center-block loading indicator" src="load.gif" />
             </div>
             <div id="loaded-content" style="display:none">
-              <p class="lead" id="track-info">Loading...</p>
+              <p class="lead"><a id="track-info" href="#" target="_blank">Loading...</a></p>
               <p class="lead" id="track-art-wrapper"><img id="track-art" src="load.gif" /></p>
               <p class="lead">
                 <a href="javascript:void(0)" id="q" class="btn btn-lg btn-default">Queue it</a>
@@ -57,7 +57,8 @@
           $.getJSON(info_uri, function(data){
             if (data && data.track.name) {
               var text = (data.track.artists.length) ? data.track.artists[0].name + ' - ' + data.track.name : data.track.name;
-              $('#track-info').text(text);
+              var rgq = encodeURIComponent(text).replace(/%20/g, "+");
+              $('#track-info').text(text).attr('href', 'http://rapgenius.com/search?q=' + rgq);
             }
           }).fail(function(){
             $('#track-info').text('Unable to load track info');
