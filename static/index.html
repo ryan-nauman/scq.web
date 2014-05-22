@@ -57,7 +57,7 @@
           $.getJSON(info_uri, function(data){
             if (data && data.track.name) {
               var text = (data.track.artists.length) ? data.track.artists[0].name + ' - ' + data.track.name : data.track.name;
-              var rgq = encodeURIComponent(text.replace(' - ', ' ')).replace(/%20/g, "+");
+              var rgq = encodeURIComponent(text.replace(' - ', ' ').replace(/\s[^\w].*$/,'')).replace(/%20/g, "+");
               $('#track-info').text(text).attr('href', 'http://rapgenius.com/search?q=' + rgq);
             }
           }).fail(function(){
